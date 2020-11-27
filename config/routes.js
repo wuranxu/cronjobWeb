@@ -24,6 +24,12 @@ export default [
             redirect: '/welcome',
           },
           {
+            path: '/job',
+            name: '任务列表',
+            icon: 'smile',
+            component: './job/List',
+          },
+          {
             path: '/welcome',
             name: 'welcome',
             icon: 'smile',
