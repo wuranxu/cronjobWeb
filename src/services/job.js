@@ -10,3 +10,9 @@ export async function fetchJobList(params) {
     data: params,
   });
 }
+
+export async function executeJob(jobId) {
+  return request(`${URL}/job/start/${jobId}`, {
+    method: 'GET',
+  });
+}
