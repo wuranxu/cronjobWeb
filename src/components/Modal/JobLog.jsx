@@ -25,10 +25,7 @@ export default ({
       bodyStyle={{ padding: 0 }}
       style={{ height: 500 }}
       className="cmd"
-      onCancel={() => {
-        setTaskModal(false);
-        setTaskId('');
-      }}
+      onCancel={setTaskModal(false)}
       footer={null}
       width={800}
     >
