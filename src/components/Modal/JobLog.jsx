@@ -14,7 +14,6 @@ export default ({
   setTaskText,
   reconnect,
   setReconnect,
-  setTaskId,
 }) => {
   const [socketUrl] = useState('ws://localhost:9999/job/log');
 
@@ -28,6 +27,7 @@ export default ({
       onCancel={() => setTaskModal(false)}
       footer={null}
       width={800}
+      destroyOnClose
     >
       {taskId !== '' ? (
         <Websocket
@@ -53,7 +53,7 @@ export default ({
           background: 'rgb(40, 44, 52)',
         }}
       >
-        <SyntaxHighlighter language="text" style={atomOneDark}>
+        <SyntaxHighlighter language="shell" style={atomOneDark}>
           {taskText}
         </SyntaxHighlighter>
       </div>
